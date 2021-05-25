@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+            const courses = new Array('Data Structure','FSD','Autometa','FCA')
+            console.log(courses);
+            const employe =[
+                {
+                    empid: 498566,
+                    name: 'SWATI',
+                    company: 'Apple',
+                    Address: {
+                        state: 'Delhi',
+                        country: 'India',
+                        pin: 110033,
+                    } 
+                },
+                {
+                    empid: 498562,
+                    name: 'Shweta',
+                    company: 'Apple',
+                    Address: {
+                        state: 'Delhi',
+                        country: 'India',
+                        pin: 110033,
+                    } 
+                }
+            ]
+            console.log(employe);
+            const response = JSON.stringify(employe);
+            console.log(response);
+            console.log(employe[1].Address);
+            console.log(employe[0].Address.pin);
+            console.log(employe[1].company);
+            const a =20;
+                if(a > 12)
+                {
+                    console.log("age is greater");
+            } else{
+              
+                   console.log("age is less than");
+               }
+
+                const color = 'red';
+                color == 'green' ?console.log("color is green") :console.log("color is not grren");
+                for( let result of employe)
+                console.log(result+" ");
+
+    </script>
+</body>
+</html>
