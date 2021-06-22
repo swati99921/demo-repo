@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowin</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+        .menu li {
+            display: inline;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            text-align: center;
+
+        }
+
+        .menu {
+            border: 2px solid black;
+            width: 40%;
+            height: 40px;
+            margin-left: 320px;
+            border-radius: 30px;
+        }
+
+
+        .form-popup1 {
+            display: none;
+            position: relative;
+            bottom: 0;
+            margin-left: 200px;
+
+
+        }
+
+        /* .form-container1 {
+            max-width: 300px;
+            padding: 10x;
+            background-color: white;
+        }
+
+        .form-container1 input {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        } */
+
+        #test2 {
+            border: 2px solid black;
+            border-radius: 30px;
+
+        }
+
+        .form-popup {
+            display: none;
+            position: relative;
+            bottom: 0;
+            margin-left: 200px;
+            z-index: 9;
+
+
+        }
+
+        /* .form-container {
+            max-width: 300px;
+            padding: 10x;
+            background-color: white;
+        }
+
+        .form-container select {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        } */
+
+        #test1 {
+            border: 2px solid black;
+            border-radius: 30px;
+
+        }
+
+        .btn {
+            background-color: blueviolet;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 15px;
+        }
+        
+    </style>
+
+</head>
+
+<body class="container-fluid">
+
+    <nav class="navbar navbar-dark " style="background-color:rgb(21, 3, 104)">
+        <a class="nav-link" href="#" style="color: white;">
+            <p style="font-family: 'Times New Roman', Times, serif;"><b>Ministry of Health and Family Welfar</b></p>
+        </a>
+        <a class="nav-link" href="#" style="color: white;"><span class="fa fa-home"></span> FAQ</a>
+        <a class="nav-link" href="#" style="color: white;"><span class="fab fa-salesforce"></span> Dashboard</a>
+
+        <a class="nav-link" href="#" style="color: white;"><span class="fas fa-upload"></span>Open APIs</a>
+
+        <a class="nav-link" href="#" style="color: white;"> <span class="fas fa-address-card"></span> Department Login
+        </a>
+
+        <a class="nav-link" href="#" style="color: white"><span class="far fa-id-badge"></span> Vaccinator
+            US</a>
+
+        <a class="nav-link" href="#" style="color: white;"><span class="fas fa-registered"></span>
+            Verify Certificate</a>
+
+
+    </nav> <br>
+    <br>
+
+    <img src="/images/largest-vaccine-banner.jpg" style="width: 100%;height: 400px;">
+
+    <div class="container">
+
+        <h4 class="text-center">Check your nearest vaccination center and slots availability</h4>
+    </div>
+    <!--<form action="php">
+        <div class="form-group ">
+            <input class="form-control" type="button" value="Search By pin                                                              Serach by District" 
+             style="border-radius: 150px; width: 40% ; font-weight: bold; margin-left: 400px;" >
+            
+
+        </div>
+       
+    </form>-->
+    <div class="container2 text-center">
+    <button id="test1" class="open" >Search by District</button>
+    <button id="test3" class="open" style="border-radius: 20px;">Search by Pin</button>
+</div>
+    <div class="container1 mt-3 mb-2">
+        <img src="../../images/Capture1.PNG" style="width: 100%;">
+    </div>
+
+    <div class="form-popup" id="team">
+        <form class="form-container">
+            <div class="form-group">
+                <label for="states-label">Select State : </label>
+                <select id="state-select" class="form-control"></select>
+            </div>
+
+            <div class="form-group">
+                <label for="district-label">Select District : </label>
+                <select id="district-select" class="form-control"></select>
+            </div>
+        </form>
+        <button id="btn"  >Search</button>
+
+    </div>
+
+    <div class="container">
+        <table class="table" id="session">
+            <thead>
+                <tr>
+                    <th>place</th>
+                    <th>Type of vaccine</th>
+                    <th>free/paid</th>
+                    <!-- <th>Covishield</th>
+                        <th>Covaxin</th>
+                        <th>Free</th>
+                        <th>Paid</th> -->
+                </tr>
+
+                
+            </thead>
+
+            <tbody>
+                 <tr>
+                     <td id="place"></td>
+                     <td id="typeofvaccine"></td>
+                     <td id="free-paid"></td>
+                 </tr>
+            </tbody>
+            
+        </table>
+
+    </div>
+   
+    
+    
+    
+    <script src="./cowin.js">  </script>
+    <script>
+        
+    </script>
+    
+</body>
+
+</html>

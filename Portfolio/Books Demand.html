@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books On Demand</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+    .wrapper
+        {
+            position: absolute;
+            top: 25%;
+            left: 30%;
+            background: rgb(21, 3, 104);
+          max-width: 600px;
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          display: flex;
+          justify-content: space-between;
+        }
+        .wrapper .input
+        {
+            width: 100%;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .searchbtn
+        {
+             
+            width: 10%;
+            right: 9%;
+            border-radius: 5px;
+            position: relative;
+            cursor: pointer;
+        }
+        .searchbtn .fas
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+        nav
+        {
+            height: 100px;
+            margin-left: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark " style="background-color: rgb(238, 18, 238);">
+        <a class="nav-link" href="#" style="color: rgb(199, 241, 9);">
+            <h3 style="font-family: cursive; "><b>BooksOnDemand</b></h3>
+        </a>
+        <a class="nav-link" href="#" style="color: white;"><span class="fa fa-home"></span> HOME</a>
+        <a class="nav-link mr-10" href="#" style="color: white;"><span class="fa fa-home ml-5"></span> Login/Register</a>
+       
+        <div class="wrapper ">
+            <input type="text" class="input" placeholder="Search for Products brands and more">
+            <div class="searchbtn">
+            <i class="fas fa-search"></i>
+
+            </div>
+        </div>  
+    </nav>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+
+<body class="container-fluid " style="margin-top: 30px;">
+    <div class="container">
+        <form class="form-group">
+            <label style="text-align: center;"> Enter Your Name</label>
+            <input class="form-control" type="number" placeholder="Enter Your ID "
+                style="width: 40%; border-radius: 10px;">
+        </form>
+        <button class="btn btn-primary" id="mybtn">Submit</button>
+        <hr>
+        <div>
+            <h3 class="text-center" style="font-size: 25px;"><u>Table Show</u></h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status" id="loading">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <table class="text-center" id="tabl" border="1">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>cliamte</th>
+                <th>terrian</th>
+                <th>surface_water</th>
+                <th>residence</th>
+            </tr>
+            <tr>
+            <td id ="id"></td>
+            <td id="name"></td>
+            <td id="climate"></td>
+            <td id="terrian"></td>
+            <td id="surface_water"></td>
+            <td id="residence"></td>
+        </tr>
+
+        </table>
+        <br>
+        <br>
+    </div>
+    <script src="project2.js"></script>
+    
+
+
+</body>
+
+</html>

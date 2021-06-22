@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        .openBtn {
+          display: flex;
+          justify-content: left;
+        }
+        .openButton {
+          border: none;
+          border-radius: 5px;
+          background-color: #1c87c9;
+          color: white;
+          padding: 14px 20px;
+          cursor: pointer;
+          position: fixed;
+        }
+       
+        .formPopup {
+          display: none;
+          position: fixed;
+          left: 45%;
+          top: 5%;
+          transform: translate(-50%, 5%);
+          /* border: 3px solid #999999; */
+          z-index: 9;
+        }
+        .formContainer {
+          max-width: 300px;
+          padding: 20px;
+          background-color: #fff;
+        }
+        /* .formContainer input[type=text],
+        .formContainer input[type=password] {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 20px 0;
+          border: none;
+          background: #eee;
+        } */
+        .formContainer input[type=text]:focus,
+        .formContainer input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+        .formContainer .btn {
+          padding: 12px 20px;
+          border: none;
+          background-color: #8ebf42;
+          color: #fff;
+          cursor: pointer;
+          width: 100%;
+          margin-bottom: 15px;
+          opacity: 0.8;
+        }
+        /* .formContainer .cancel {
+          background-color: #cc0000;
+        } */
+        /* .formContainer .btn:hover,
+        .openButton:hover {
+          opacity: 1;
+        } */
+      </style>
+</head>
+<body>
+   
+    <div class="openBtn">
+      <button class="openButton" onclick="openForm()"><strong>Pin</strong></button>
+    </div>
+    <div class="loginPopup">
+      <div class="formPopup" id="popupForm">
+        <form action="/action_page.php" class="formContainer">
+         
+          <label for="Enter Your Pin">
+           
+          </label>
+          <input type="number" id="pin" placeholder="Your Pin" name="pin" required>
+          
+        </form>
+        <button id="sub">Submit</button>
+      </div>
+    </div>
+    <div class="main">
+        <h3>Vaccination Details</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Address</th>
+                    <th>Age</th>
+                    <th>Types of Vaccine</th>
+                    <th>Free/paid</th>
+                    <th>Dose 1</th>
+                    <th>Dose 2</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="place"></td>
+                    <td id="address"></td>
+                    <td id="age"></td>
+                    <td id="types of vaccine"></td>
+                    <td id="free-paid"></td>
+                    <td id="dose 1"></td>
+                    <td id="dose 2"></td>
+
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <script>
+      function openForm() {
+        document.getElementById("popupForm").style.display = "block";
+      }
+
+      const  vaccination_url = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincode}1&date=${date}`
+
+console.log(vaccination_url);
+
+xhr.open('GET', vaccination_url)
+
+xhr.onreadystatechange = () => {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        const data = JSON.parse(xhr.responseText)
+        console.log(data);
+        const test_len = data.sessions.length;
+        var output = '';
+        var output1 = '';
+        for (let i = o; i < test_len; i++) {
+            output += `<tr> ${data.sessions[i].place} <br>${data.sessions[i].address} <br> ${data.sessions[i].age} <br>${data.sessions[i].typeofvaccine}<br>${data.sessions[i].free/paid}</tr><hr>`
+            // output1 += `<tr> Available Dose 1 : ${data.sessions[i].available_capacity_dose1}<br>
+            // Available Dose 2: ${data.sessions[i].available_capacity_dose2}</tr> <hr>`
+
+        }
+        place.innerHTML = output
+        
+    }
+}
+    xhr.send()
+
+
+     
+    </script>
+    
+</body>
+</html>

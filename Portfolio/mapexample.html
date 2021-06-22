@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Data</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        const data = [
+            {
+                id:1000,
+                name:"swati",
+                course:"MCA",
+            },
+            {
+                id:1001,
+                name:"shweta",
+                course:"BED",
+            },
+            {
+                id:1003,
+                name:"Anishka",
+                course:"Primary Class",
+            },
+        ]
+        const newdata = data.map((cvalue)=>{
+            return `My Name Is Swati ${cvalue.name}`
+        });
+        console.log(newdata);
+        document.getElementById("show").innerHTML = newdata;
+    </script>
+</body>
+</html>
